@@ -12,6 +12,21 @@ use Illuminate\Support\Str;
  */
 class UserFactory extends Factory
 {
+    public function staff(): static
+    {
+        return $this->state(fn (): array => ['role' => 'sta']);
+    }
+
+    public function administrator(): static
+    {
+        return $this->state(fn (): array => ['role' => 'admin']);
+    }
+
+    public function disabled(): static
+    {
+        return $this->state(fn (): array => ['is_active' => false]);
+    }
+
     /**
      * The current password being used by the factory.
      */

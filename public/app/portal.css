@@ -1,0 +1,414 @@
+body {
+    background:var(--paper);
+    color:var(--ink);
+}
+
+.shell {
+    min-height:100dvh;
+}
+
+.sidebar {
+    height:100dvh;
+    overflow-y:auto;
+    overscroll-behavior-y:contain;
+    scrollbar-width:thin;
+    scrollbar-color:#bfd2c9 var(--deep);
+}
+
+.sidebar > * {
+    flex-shrink:0;
+}
+
+.loading-screen {
+    max-width:720px;
+    margin:10vh auto;
+    padding:24px;
+}
+
+#main:focus {
+    outline:none;
+}
+
+.account-name {
+    max-width:220px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    font-size:.85rem;
+}
+
+.sidebar-footer button {
+    color:#d7e5df;
+    background:transparent;
+    width:100%;
+    justify-content:flex-start;
+}
+
+.login-layout {
+    min-height:100dvh;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    gap:80px;
+    max-width:1100px;
+    padding:60px 32px;
+    margin:auto;
+}
+
+.login-story img {
+    width:88px;
+    height:88px;
+    margin-bottom:30px;
+    border-radius:50%;
+}
+
+.login-story h1 {
+    font-size:3rem;
+    max-width:12ch;
+    margin-bottom:24px;
+}
+
+.login-story {
+    padding:36px;
+    border-radius:12px;
+    gap:16px;
+}
+
+.login-story p {
+    max-width:42ch;
+    color:#d7e5df;
+}
+
+.auth-card {
+    padding:32px;
+}
+
+.auth-card h2 {
+    font-size:1.65rem;
+}
+
+.auth-card .field {
+    margin-bottom:18px;
+}
+
+.form-label {
+    font-weight:600;
+    font-size:.85rem;
+}
+
+.form-control:focus,.form-select:focus {
+    border-color:var(--teal);
+    box-shadow:0 0 0 .2rem #145a5020;
+}
+
+.help-copy {
+    color:var(--muted);
+    font-size:.85rem;
+}
+
+.error-box:empty {
+    display:none;
+}
+
+.error-box {
+    margin:14px 0;
+}
+
+.metric-value {
+    font-size:2rem;
+    font-weight:650;
+    line-height:1.2;
+    margin-bottom:8px;
+    font-variant-numeric:tabular-nums;
+}
+
+.metric-label {
+    font-size:.83rem;
+    color:var(--muted);
+}
+
+.metric-grid {
+    margin-bottom:26px;
+}
+
+.reference-text {
+    overflow-wrap:anywhere;
+    font-variant-numeric:tabular-nums;
+}
+
+.document-entry {
+    border-bottom:1px solid var(--line);
+    padding-bottom:24px;
+    margin-bottom:24px;
+}
+
+.document-entry:last-child {
+    border-bottom:0;
+}
+
+.faculty-options {
+    max-height:220px;
+    overflow:auto;
+    display:grid;
+    gap:8px;
+}
+
+.faculty-options label {
+    display:flex;
+    align-items:center;
+    gap:9px;
+    font-size:.88rem;
+}
+
+.faculty-options input {
+    flex-shrink:0;
+}
+
+.list-row {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:16px;
+    padding:15px 0;
+    border-bottom:1px solid var(--line);
+}
+
+.list-row:last-child {
+    border-bottom:0;
+}
+
+.card-header {
+    background:transparent;
+}
+
+.card-header h2 {
+    font-size:1.1rem;
+}
+
+.blank-state {
+    padding:44px 24px;
+    text-align:center;
+}
+
+.blank-state p {
+    color:var(--muted);
+    margin:12px auto 22px;
+    max-width:48ch;
+}
+
+.document-meta {
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    font-size:.85rem;
+    color:var(--muted);
+    margin:15px 0;
+}
+
+.detail-history {
+    margin-top:16px;
+}
+
+.detail-history summary {
+    color:var(--teal);
+    cursor:pointer;
+    font-size:.85rem;
+}
+
+.timeline {
+    list-style:none;
+    padding:0;
+    margin:15px 0 0;
+}
+
+.timeline li {
+    padding:10px 0;
+    border-bottom:1px solid var(--line);
+    font-size:.85rem;
+}
+
+.timeline time {
+    display:block;
+    color:var(--muted);
+    font-size:.78rem;
+}
+
+.page-controls {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:16px;
+    margin-top:20px;
+    font-size:.85rem;
+}
+
+.table td,.table th {
+    vertical-align:middle;
+}
+
+.table td {
+    overflow-wrap:anywhere;
+}
+
+.table .btn {
+    white-space:nowrap;
+}
+
+.status-count {
+    display:flex;
+    justify-content:space-between;
+    padding:11px 0;
+    border-bottom:1px solid var(--line);
+}
+
+.status-count:last-child {
+    border:0;
+}
+
+.inline-fields {
+    display:flex;
+    align-items:end;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.inline-fields .field {
+    flex:1;
+    min-width:170px;
+}
+
+.narrow {
+    max-width:780px;
+}
+
+fieldset {
+    min-width:0;
+}
+
+legend {
+    font-size:1rem;
+    font-weight:600;
+}
+
+.field {
+    min-width:0;
+}
+
+.auth-links {
+    display:flex;
+    justify-content:space-between;
+    gap:16px;
+    margin-top:20px;
+    font-size:.85rem;
+}
+
+.release-choice {
+    display:flex;
+    gap:12px;
+    align-items:center;
+    padding:13px 0;
+    border-bottom:1px solid var(--line);
+}
+
+.release-choice input {
+    flex-shrink:0;
+}
+
+.badge {
+    max-width:100%;
+}
+
+#toast {
+    pointer-events:none;
+}
+
+.saving-note {
+    color:var(--muted);
+    margin:8px 0;
+    font-size:.85rem;
+}
+
+@media(max-width:900px) {
+    .login-layout {
+        gap:32px;
+    }
+
+    .login-story h1 {
+        font-size:2.3rem;
+    }
+}
+
+@media(max-width:700px) {
+    .login-layout {
+        display:block;
+        padding:30px 20px;
+    }
+
+    .login-story {
+        margin-bottom:24px;
+    }
+
+    .login-story img {
+        width:52px;
+        height:52px;
+        margin-bottom:15px;
+    }
+
+    .login-story h1 {
+        font-size:2rem;
+        max-width:none;
+        margin-bottom:14px;
+    }
+
+    .login-story p {
+        display:none;
+    }
+
+    .auth-card {
+        padding:24px;
+    }
+
+    .account-name {
+        max-width:120px;
+    }
+
+    .breadcrumb {
+        display:none;
+    }
+
+    .topbar {
+        justify-content:space-between;
+    }
+
+    .list-row {
+        align-items:flex-start;
+        flex-wrap:wrap;
+    }
+
+    .page-head {
+        flex-wrap:wrap;
+    }
+}
+
+@media print {
+    .sidebar,.topbar,.skip-link,.page-head,.no-print,#toast {
+        display:none!important;
+    }
+
+    .shell,.workarea {
+        display:block!important;
+    }
+
+    .main {
+        padding:0!important;
+    }
+
+    .stub {
+        border:0;
+        max-width:none;
+    }
+
+    body {
+        background:white;
+    }
+}
